@@ -1,0 +1,6 @@
+Feature: Setting up 10 minutes mail for registration
+
+  Scenario: Getting email address from 10minutemail.net
+    Given I visit 10minutemail.net
+    When  I read the email address
+    Then  I remember the email address

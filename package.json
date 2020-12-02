@@ -1,0 +1,19 @@
+{
+  "name": "bitpanda_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run --spec \"**/*.feature\""
+  },
+  "author": "Christopher Paliga",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.0.1",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "mailslurp-client": "^10.0.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

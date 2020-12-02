@@ -1,0 +1,21 @@
+Feature: Signup
+
+  I want to be able to signup to amazon.com using mailSlurp API.
+  MailSlurp enables to use an API to create mail inboxes and
+  receive emails in our tests. Unfortunately it's free tier
+  has some limitations to the amount of inboxes created and
+  emails received.
+
+  @mailSlurp @ignore
+  Scenario: Signup of fresh (mailSlurp) adult user (happy path)
+    Given I open the -allegro home- page
+    And   I press the -consent- button if required
+    And   I press the -my allegro- button
+    And   I press the -register- button
+    Then  I land on the -registration- page
+    And   I type a mailSlurp email in
+    And   I type a password in
+    And   I press the -I am adult- button
+    And   I check the -terms agreement- checkbox
+    And   I press the -create account- button
+    Then  I land on the -registration confirmation- page

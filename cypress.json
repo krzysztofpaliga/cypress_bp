@@ -1,0 +1,10 @@
+{
+  "ignoreTestFiles": "*.js",
+  "testFiles": ["TenMinutesMail.first_feature",
+    "**/*.feature"],
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 60000,
+  "requestTimeout": 60000,
+  "viewportHeight": 800,
+  "viewportWidth": 800
+}
