@@ -19,3 +19,4 @@ Feature: Signup
     And   I check the -terms agreement- checkbox
     And   I press the -create account- button
     Then  I land on the -registration confirmation- page
+

@@ -2,34 +2,6 @@ import { Given } from "cypress-cucumber-preprocessor/steps"
 import { When } from "cypress-cucumber-preprocessor/steps"
 import { Then } from "cypress-cucumber-preprocessor/steps"
 import { Before } from "cypress-cucumber-preprocessor/steps"
-import { After } from "cypress-cucumber-preprocessor/steps"
-import { MailSlurp } from "mailslurp-client"
-
-/* mailSlurp free account has a strict limitation on number of inboxes */
-let myinbox
-Before({tags: "@mailSlurp"}, () => {
-    // cy.createInbox().then((inbox) => {
-    //     assert.isDefined(inbox)
-    //     myinbox = inbox
-    // })
-})
-
-Given('I open the -allegro home- page', function () {
-    cy.visit("https://www.allegro.pl")
-});
-
-When('I press the -consent- button if required', function() {
-    cy.get(":button[data-role=accept-consent]").then(($btn) => {
-        if($btn.length > 0) {
-            $btn.click()
-        }
-    })
-})
-
-When('I press the -my allegro- button', function() {
-    cy.get("button[data-role=header-dropdown-toggle]").last().click()
-    // cy.contains("Moje Allegro").click()
-})
 
 When('I press the -register- button', function() {
     cy.get("a[data-analytics-click-value=register-button]").click()
@@ -39,10 +11,6 @@ Then('I land on the -registration- page', function() {
     cy.url().should("contain", "rejestracja")
 })
 
-When('I type a mailSlurp email in', function() {
-    cy.get("#email").type(myinbox.emailAddress)
-})
-
 When('I type a random email in', function () {
     let r = Math.random().toString(36).substring(7);
     cy.get("#email").clear().type(`randomemail${r}@gmail.com`)
@@ -50,12 +18,6 @@ When('I type a random email in', function () {
 
 When("I type an invalid email format in", function() {
     cy.get("#email").type("wrongformatemail.com")
-})
-
-When('I type the 10minutemail email in', function() {
-    cy.readFile("10minutemail.txt").then(($emailAddress) => {
-        cy.get("#email").type($emailAddress)
-    })
 })
 
 Then("I see the -enter email- reminder", function() {

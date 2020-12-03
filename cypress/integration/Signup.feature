@@ -114,7 +114,7 @@ Feature: Signup
     And   I press the -create account- button
     And   I land on the -registration confirmation- page
 
-  @randomMail @current
+  @randomMail 
   Scenario: Signup of a random user (invalid email format entered)
   Test if signup of an under user does not proceed without the required
   password entered.
@@ -153,7 +153,7 @@ Feature: Signup
     And   I press the -create account- button
     And   I land on the -registration confirmation- page
 
-  @randomMail @current
+  @randomMail 
   Scenario: Signup of a random user (invalid password format entered)
   Test if signup of an under user does not proceed without the required
   password format entered.

@@ -18,3 +18,9 @@ When('I read the email address', function() {
 Then('I remember the email address', function() {
     cy.writeFile("10minutemail.txt", emailAddress)
 })
+
+When('I type the 10minutemail email in', function() {
+    cy.readFile("10minutemail.txt").then(($emailAddress) => {
+        cy.get("#email").type($emailAddress)
+    })
+})
