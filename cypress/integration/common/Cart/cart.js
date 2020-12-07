@@ -21,5 +21,9 @@ When("I press the -continue shopping- button", function() {
 })
 
 When("I press the -cart- button", function() {
-    cy.get("a[href=\\/koszyk]").click()
+    cy.get("a[href=\\/koszyk]").first().click()
+})
+
+When("I remove first item from the cart", function() {
+    cy.get("section._9f0v0:nth-child(4) > seller-offers:nth-child(1) > div:nth-child(2) > item:nth-child(1) > div:nth-child(1) > div:nth-child(2) > offer-row:nth-child(1) > div:nth-child(1) > div:nth-child(2) > button:nth-child(1) > i:nth-child(1)").click()
 })

@@ -7,11 +7,11 @@ Feature: Signup
 
   @10minutemail @ignore
   Scenario: Signup of fresh (10minutemail) adult user (happy path)
-    Given   I open the -allegro home- page
-    And   I press the -consent- button if required
+    Given  I open the -allegro home- page
+    When  I press the -consent- button if required
     And   I press the -my allegro- button
     And   I press the -register- button
-    Then  I land on the -registration- page
+    And   I land on the -registration- page
     And   I type the 10minutemail email in
     And   I type a password in
     And   I press the -I am adult- button

@@ -5,8 +5,8 @@ Feature: Login
   @login @current
   Scenario: Login (happy path)
     Given I open the -allegro home- page
-    And   I press the -consent- button if required
-    When  I press the -my allegro- button
+    When  I press the -consent- button if required
+    And   I press the -my allegro- button
     And   I press the -login- button
     And   I enter the email
     And   I enter the password
