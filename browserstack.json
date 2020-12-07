@@ -1,0 +1,38 @@
+{
+    "auth": {
+        "username": "steamnoid1",
+        "access_key": "FtyYqtjzz5h3KBxKYpXD"
+    },
+    "browsers": [
+        {
+            "browser": "chrome",
+            "os": "Windows 10",
+            "versions": [
+                "latest",
+                "latest-1"
+            ]
+        }
+    ],
+    "run_settings": {
+        "cypress_config_file": "cypress.json",
+        "project_name": "bitpanda_1",
+        "build_name": "build-name",
+        "exclude": [],
+        "parallels": "1",
+        "npm_dependencies": {
+            "cypress": "^6.0.1",
+            "cypress-cucumber-preprocessor": "^4.0.0",
+            "mailslurp-client": "^10.0.4"
+        },
+        "package_config_options": {
+            "cypress-cucumber-preprocessor": {
+                "nonGlobalStepDefinitions": true
+            }
+        }
+    },
+    "connection_settings": {
+        "local": false,
+        "local_identifier": null
+    },
+    "disable_usage_reporting": false
+}

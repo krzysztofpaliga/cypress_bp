@@ -33,3 +33,7 @@ Then("I land on the -2FA- page", function() {
 When("I press the the -decline 2FA- button", function() {
     cy.get("a.msts_n7:nth-child(1)").click()
 })
+
+When("I login", function() {
+    cy.login()
+})

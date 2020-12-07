@@ -4,7 +4,7 @@
     "**/*.feature"],
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 60000,
-  "requestTimeout": 60000,
+  "requestTimeout": 90000,
   "viewportHeight": 800,
   "viewportWidth": 800
 }
